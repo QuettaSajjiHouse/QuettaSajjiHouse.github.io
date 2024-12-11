@@ -1,0 +1,158 @@
+/* General body styles */
+body {
+  font-family: 'Roboto', sans-serif; /* New font for the body */
+  background-color: #f9f9f9;
+}
+
+/* Navbar Styling */
+.navbar-nav .nav-link {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif; /* More modern font for navbar */
+  text-transform: uppercase;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff6600; /* Change navbar link color on hover */
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-family: 'Candal', sans-serif; /* Unique font for the brand */
+  font-size: 1.8em; /* Larger logo font */
+}
+
+/* Section Headers */
+h1, h2 {
+  font-family: 'Lora', serif; /* Elegant serif font */
+  color: #333;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+#home {
+  padding: 80px 20px;
+  color: #fff;
+  position: relative;
+}
+
+#home audio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the audio covers the whole container */
+  z-index: -1; /* Makes sure the audio is behind the text */
+}
+
+#home h1 {
+  font-size: 3em;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+#home p {
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+/* Menu Item Styling */
+.menu-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 2px solid #eee; /* Light border around menu items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.menu-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+.menu-item p {
+  margin: 0;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu-item span {
+  font-weight: bold;
+  color: #ff6600; /* Change the price color */
+}
+
+/* Section Padding */
+section {
+  padding: 80px 20px;
+}
+
+/* Restaurant Section */
+#restaurant p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Lora', serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+#contact a {
+  color: #333;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+  color: #ff6600; /* Color change on hover */
+}
+
+/* New specific fonts for individual <p> tags */
+.font-arial {
+  font-family: 'Arial', sans-serif;
+}
+
+.font-times {
+  font-family: 'Times New Roman', serif;
+}
+
+.font-courier {
+  font-family: 'Courier New', monospace;
+}
+
+.font-comic {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Smooth transitions for hover effects */
+.navbar-nav .nav-link,
+.menu-item {
+  transition: all 0.3s ease;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .navbar-nav .nav-link {
+    font-size: 1.1em;
+  }
+
+  .menu-item {
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  #home h1 {
+    font-size: 2.5em; /* Adjust heading size for mobile */
+  }
+}
+
+.menu2 {
+	float: right;
+	display: block;
+}
+
