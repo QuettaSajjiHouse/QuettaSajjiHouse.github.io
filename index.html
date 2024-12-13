@@ -8,42 +8,49 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
- <style>
-    .gallery {
-      padding: 50px 0;
-      background-color: #fff5e6;
-    }
+<style>
+  .gallery {
+    padding: 50px 0;
+    background-color: #fff5e6;
+  }
 
-    .gallery-slider {
-      width: 90%;
-      margin: 0 auto;
-    }
+  .gallery-slider {
+    width: 90%;
+    margin: 0 auto;
+  }
 
-    .swiper-wrapper {
-      display: flex;
-      align-items: center;
-    }
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
 
-    .swiper-slide {
-      width: 250px;
-      height: 200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .swiper-slide {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: transform 0.5s, opacity 0.5s;
+  }
 
-    .swiper-slide img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
 
-    .swiper-slide-active {
-      transform: scale(1.2);
-      z-index: 1;
-      transition: transform 0.5s;
-    }
-  </style>
+  .swiper-slide-active {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  .swiper-slide-next,
+  .swiper-slide-prev {
+    transform: scale(1.1);
+    opacity: 0.75;
+  }
+</style>
 	
 </head>
 <body>
@@ -264,29 +271,26 @@
   <!-- Swiper JS and GLightbox Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>
-    // Initialize Swiper
-    const swiper = new Swiper('.gallery-slider', {
-      loop: true,
-      spaceBetween: 20,
-      centeredSlides: true,
-      slidesPerView: 3,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        768: { slidesPerView: 3 },
-        576: { slidesPerView: 2 },
-        320: { slidesPerView: 1 },
-      }
-    });
-
-    // Initialize GLightbox
-    const lightbox = GLightbox({
-      selector: '.glightbox',
-    });
-  </script>
+	  
+<script>
+  // Initialize Swiper
+  const swiper = new Swiper('.gallery-slider', {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 5, // Show 5 slides at a time
+    spaceBetween: 20,
+    autoplay: {
+      delay: 2000, // Transition every 2 seconds
+      disableOnInteraction: false,
+    },
+    speed: 800, // Smooth transition speed
+    breakpoints: {
+      768: { slidesPerView: 5 },
+      576: { slidesPerView: 3 },
+      320: { slidesPerView: 1 },
+    },
+  });
+</script>
 	
   <!-- Contact Section -->
   <section id="contact" class="text-center py-5" style="background-color: #ffcc00;">
