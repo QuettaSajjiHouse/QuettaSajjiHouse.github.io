@@ -31,7 +31,7 @@
     justify-content: center;
     align-items: center;
     opacity: 0.5;
-    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.8s, opacity 0.8s;
   }
 
   .swiper-slide img {
@@ -51,6 +51,7 @@
     opacity: 0.75;
   }
 </style>
+
 	
 </head>
 <body>
@@ -273,21 +274,20 @@
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 	  
 <script>
-  // Initialize Swiper
   const swiper = new Swiper('.gallery-slider', {
     loop: true,
     centeredSlides: true,
-    slidesPerView: 5, // Show 5 slides at a time
+    slidesPerView: 5, // Always keep 5 slides visible
     spaceBetween: 20,
     autoplay: {
-      delay: 2000, // Transition every 2 seconds
+      delay: 4000, // 4 seconds delay for slower transitions
       disableOnInteraction: false,
     },
-    speed: 800, // Smooth transition speed
+    speed: 1000, // Smooth transition speed (1 second)
     breakpoints: {
-      768: { slidesPerView: 5 },
-      576: { slidesPerView: 3 },
-      320: { slidesPerView: 1 },
+      768: { slidesPerView: 5 }, // Ensure 5 slides for medium screens
+      576: { slidesPerView: 3 }, // Adjust to 3 slides for smaller screens
+      320: { slidesPerView: 1 }, // Single slide for extra small screens
     },
   });
 </script>
