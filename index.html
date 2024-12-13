@@ -132,24 +132,32 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <script>
+<!-- Swiper JS and GLightbox -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
     // Initialize Swiper
     const swiper = new Swiper('.gallery-slider', {
-      loop: true,
-      spaceBetween: 20,
-      centeredSlides: true,
-      slidesPerView: 5,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
+        loop: true,
+        spaceBetween: 20,
+        centeredSlides: false, // Disable centered slides for proper movement
+        slidesPerView: 3, // Adjust to your preference
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
 
     // Initialize GLightbox
     const lightbox = GLightbox({
-      selector: '.glightbox',
+        selector: '.glightbox',
     });
-  </script>
+</script>
 
 </body>
 </html>
