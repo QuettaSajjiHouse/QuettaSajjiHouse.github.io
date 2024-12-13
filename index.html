@@ -7,6 +7,50 @@
   <title>Quetta Sajji House</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .gallery {
+            width: 80%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery .swiper-wrapper {
+            align-items: center;
+        }
+        .gallery .swiper-slide {
+            width: 250px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery .swiper-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .swiper-slide-active {
+            transform: scale(1.2);
+            z-index: 1;
+            transition: transform 0.5s;
+        }
+    </style>
+	
 </head>
 <body>
 
@@ -186,6 +230,62 @@
       </div>
     </div>
   </section>
+
+<section id="gallery" class="gallery">
+    <div class="gallery-slider swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+		    <h2>Gallery</h2>
+                <a href="https://via.placeholder.com/600" class="glightbox">
+                    <img src="pic2.png" alt="Image 1">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://via.placeholder.com/600" class="glightbox">
+                    <img src="pic3.png" alt="Image 2">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://via.placeholder.com/600" class="glightbox">
+                    <img src="pic4.png" alt="Image 3">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://via.placeholder.com/600" class="glightbox">
+                    <img src="pic5.png" alt="Image 4">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://via.placeholder.com/600" class="glightbox">
+                    <img src="pic6.png" alt="Image 5">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Swiper JS and GLightbox from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  // Initialize Swiper
+  const swiper = new Swiper('.gallery-slider', {
+    loop: true,
+    spaceBetween: 20,
+    centeredSlides: true,
+    slidesPerView: 5,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
+
+  // Initialize GLightbox
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+  });
+</script>
 
   <!-- Contact Section -->
   <section id="contact" class="text-center py-5" style="background-color: #ffcc00;">
