@@ -7,9 +7,11 @@
   <title>Quetta Sajji House</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
-	<style>
-      .gallery {
+  <style>
+    .gallery {
       padding: 50px 0;
       background-color: #fff5e6;
     }
@@ -43,46 +45,42 @@
       z-index: 1;
       transition: transform 0.5s;
     }
-    </style>
-	
+  </style>
 </head>
 <body>
 
   <!-- Navbar Section -->
- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: orange;">
-  <div class="container">
-    <!-- Logo -->
-    <a class="navbar-brand" href="#">
-      <img src="images/logo.png" alt="Quetta Sajji House Logo" style="height: 50px;">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#restaurant">Restaurant</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#menu">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: orange;">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Quetta Sajji House Logo" style="height: 50px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#restaurant">Restaurant</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-
+  </nav>
 
   <!-- Home Section -->
   <section id="home" class="text-center py-5" style="background-color: #ffcc00;">
     <h1>Welcome to Quetta Sajji House!</h1>
     <div>
-      <!-- Video background (replace the link with your video URL) -->
       <video autoplay loop muted style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
         <source src="path_to_your_video.mp4" type="video/mp4">
       </video>
@@ -94,11 +92,11 @@
   <section id="restaurant" class="text-center py-5" style="background-color: #ffcc80;">
     <div class="container">
       <h2>Welcome to Quetta Sajji House!</h2>
-      <p>At Quetta Sajji House, we bring you the authentic flavors of Quetta, Pakistan, crafted with passion and tradition. Our restaurant is dedicated to serving genuine, mouthwatering dishes that reflect the rich culinary heritage of the region, including our signature Sajji, flavorful Chargha, and aromatic Kabuli Pulao. Co-founded by Athar Ali and proudly sponsored by Mazhar Jewellers, Quetta Sajji House is more than just a restaurant – it’s a journey to the heart of Quetta’s vibrant food culture. We’re also excited to introduce our refreshing water flavors: Sparkling Lemon, Sparkling Water, and Natural Spring Water – the perfect complement to our delicious meals. Join us for an unforgettable dining experience where every bite and sip tells a story of tradition and taste.</p>
+      <p>At Quetta Sajji House, we bring you the authentic flavors of Quetta, Pakistan...</p>
     </div>
   </section>
 
-  <!-- Menu Section -->
+ <!-- Menu Section -->
   <section id="menu" class="text-center py-5" style="background-color: #fff5e6;">
     <div class="container">
       <h2>Menu</h2>
@@ -224,8 +222,7 @@
       </div>
     </div>
   </section>
-
- <!-- Gallery Section -->
+  <!-- Gallery Section -->
   <section id="gallery" class="gallery">
     <div class="container text-center">
       <h2 class="mb-5">Gallery</h2>
@@ -245,24 +242,21 @@
             <a href="https://via.placeholder.com/600" class="glightbox">
               <img src="pic4.png" alt="Image 3">
             </a>
-              </div>
-              <div class="swiper-slide">
+          </div>
+	<div class="swiper-slide">
             <a href="https://via.placeholder.com/600" class="glightbox">
               <img src="pic5.png" alt="Image 4">
             </a>
           </div>
-              <div class="swiper-slide">
+	<div class="swiper-slide">
             <a href="https://via.placeholder.com/600" class="glightbox">
               <img src="pic6.png" alt="Image 5">
-            </a>
-          </div>
             </a>
           </div>
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- Contact Section -->
   <section id="contact" class="text-center py-5" style="background-color: #ffcc00;">
@@ -302,6 +296,5 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 </html>
