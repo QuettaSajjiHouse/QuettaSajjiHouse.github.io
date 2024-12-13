@@ -7,49 +7,42 @@
   <title>Quetta Sajji House</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
   <style>
-    .gallery {
-      padding: 50px 0;
-      background-color: #fff5e6;
-    }
-
-    .gallery-slider {
-      width: 90%;
-      margin: 0 auto;
-    }
-
-    .swiper-wrapper {
-      display: flex;
-      align-items: center;
-    }
-
-    .swiper-slide {
-      width: 250px;
-      height: 200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .swiper-slide-active {
-      transform: scale(1.2);
-      z-index: 1;
-      transition: transform 0.5s;
-    }
+        .gallery {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery .swiper-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery .swiper-slide {
+            width: 250px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery .swiper-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .swiper-slide-active {
+            transform: scale(1.2);
+            z-index: 1;
+            transition: transform 0.5s;
+        }
   </style>
 </head>
 <body>
 
-  <!-- Navbar Section -->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: orange;">
     <div class="container">
       <a class="navbar-brand" href="#">
@@ -70,6 +63,9 @@
             <a class="nav-link" href="#menu">Menu</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
@@ -77,73 +73,46 @@
     </div>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home" class="text-center py-5" style="background-color: #ffcc00;">
-    <h1>Welcome to Quetta Sajji House!</h1>
-    <div>
-      <video autoplay loop muted style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-        <source src="path_to_your_video.mp4" type="video/mp4">
-      </video>
-    </div>
-    <p>Come and explore the authentic flavors of Quetta!</p>
-  </section>
-
   <!-- Restaurant Section -->
   <section id="restaurant" class="text-center py-5" style="background-color: #ffcc80;">
     <div class="container">
       <h2>Welcome to Quetta Sajji House!</h2>
-      <p>At Quetta Sajji House, we bring you the authentic flavors of Quetta, Pakistan...</p>
-    </div>
-  </section>
-
-  <!-- Menu Section -->
-  <section id="menu" class="text-center py-5" style="background-color: #fff5e6;">
-    <div class="container">
-      <h2>Menu</h2>
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <h3>Breakfast</h3>
-          <p>Paratha (PLAIN) <span>$2.99</span></p>
-          <p>Halwa Puri <span>$9.99</span></p>
-        </div>
-        <div class="col-12 col-md-4">
-          <h3>Appetizers</h3>
-          <p>Beef Samosa <span>$1.49</span></p>
-          <p>Vegetable Samosa <span>$1.49</span></p>
-        </div>
-        <div class="col-12 col-md-4">
-          <h3>BBQ & Kebab</h3>
-          <p>Mix Grill <span>$25.99</span></p>
-          <p>Chicken Tikka <span>$14.99</span></p>
-        </div>
-      </div>
+      <p>At Quetta Sajji House, we bring you the authentic flavors of Quetta, Pakistan, crafted with passion and tradition. Our restaurant is dedicated to serving genuine, mouthwatering dishes that reflect the rich culinary heritage of the region, including our signature Sajji, flavorful Chargha, and aromatic Kabuli Pulao. Co-founded by Athar Ali and proudly sponsored by Mazhar Jewellers, Quetta Sajji House is more than just a restaurant – it’s a journey to the heart of Quetta’s vibrant food culture. We’re also excited to introduce our refreshing water flavors: Sparkling Lemon, Sparkling Water, and Natural Spring Water – the perfect complement to our delicious meals. Join us for an unforgettable dining experience where every bite and sip tells a story of tradition and taste.</p>
     </div>
   </section>
 
   <!-- Gallery Section -->
   <section id="gallery" class="gallery">
-    <div class="container text-center">
-      <h2 class="mb-5">Gallery</h2>
+      <h2 class="text-center">Gallery</h2>
       <div class="gallery-slider swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="https://via.placeholder.com/600" class="glightbox">
-              <img src="pic2.png" alt="Image 1">
-            </a>
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <a href="https://via.placeholder.com/600" class="glightbox">
+                      <img src="https://via.placeholder.com/250" alt="Image 1">
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="https://via.placeholder.com/600" class="glightbox">
+                      <img src="https://via.placeholder.com/250" alt="Image 2">
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="https://via.placeholder.com/600" class="glightbox">
+                      <img src="https://via.placeholder.com/250" alt="Image 3">
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="https://via.placeholder.com/600" class="glightbox">
+                      <img src="https://via.placeholder.com/250" alt="Image 4">
+                  </a>
+              </div>
+              <div class="swiper-slide">
+                  <a href="https://via.placeholder.com/600" class="glightbox">
+                      <img src="https://via.placeholder.com/250" alt="Image 5">
+                  </a>
+              </div>
           </div>
-          <div class="swiper-slide">
-            <a href="https://via.placeholder.com/600" class="glightbox">
-              <img src="pic3.png" alt="Image 2">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://via.placeholder.com/600" class="glightbox">
-              <img src="pic4.png" alt="Image 3">
-            </a>
-          </div>
-        </div>
       </div>
-    </div>
   </section>
 
   <!-- Contact Section -->
@@ -159,30 +128,28 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <script>
+    // Initialize Swiper
     const swiper = new Swiper('.gallery-slider', {
       loop: true,
       spaceBetween: 20,
       centeredSlides: true,
-      slidesPerView: 3,
+      slidesPerView: 5,
       autoplay: {
         delay: 2500,
         disableOnInteraction: false,
       },
-      breakpoints: {
-        768: { slidesPerView: 3 },
-        576: { slidesPerView: 2 },
-        320: { slidesPerView: 1 },
-      }
     });
 
+    // Initialize GLightbox
     const lightbox = GLightbox({
       selector: '.glightbox',
     });
   </script>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
