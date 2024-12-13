@@ -25,14 +25,14 @@
   }
 
   .swiper-slide {
-    width: 250px;
-    height: 200px;
+    width: 200px; /* Reduced width for better alignment */
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.5;
-    transform: scale(0.9); /* Default scale for non-active slides */
-    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0.4; /* Default fade for non-active slides */
+    transform: scale(0.8); /* Shrunk scale for non-active slides */
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), opacity 1s ease; /* Smooth cubic transition */
   }
 
   .swiper-slide img {
@@ -42,15 +42,17 @@
   }
 
   .swiper-slide-active {
-    transform: scale(1.2); /* Highlight the active slide */
-    opacity: 1;
-    border: 3px solid orange; /* Outline the center photo */
+    transform: scale(1.3); /* Larger scale for active slide */
+    opacity: 1; /* Fully visible */
+    border: 4px solid #ffa500; /* Highlighted outline */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease; /* Faster smooth effect */
   }
 
   .swiper-slide-next,
   .swiper-slide-prev {
-    transform: scale(1.1); /* Slightly larger for adjacent slides */
-    opacity: 0.75;
+    transform: scale(1.1); /* Moderate scaling for adjacent slides */
+    opacity: 0.7; /* Slight fade for adjacent slides */
   }
 </style>
 
@@ -280,20 +282,21 @@
   const swiper = new Swiper('.gallery-slider', {
     loop: true,
     centeredSlides: true,
-    slidesPerView: 5, // Always maintain 5 visible slides
-    spaceBetween: 20,
+    slidesPerView: 5, // Ensure consistent 5 slides visible
+    spaceBetween: 15, // Smaller gap for better alignment
     autoplay: {
-      delay: 4000, // Slower rotation (4 seconds)
+      delay: 5000, // Smoothly rotate every 5 seconds
       disableOnInteraction: false,
     },
-    speed: 1200, // Smooth transition speed (1.2 seconds)
+    speed: 1000, // Smoother transition speed
     breakpoints: {
-      768: { slidesPerView: 5 }, // 5 slides for medium screens
-      576: { slidesPerView: 3 }, // Adjust to 3 for small screens
-      320: { slidesPerView: 1 }, // Single slide for extra small screens
+      768: { slidesPerView: 5 },
+      576: { slidesPerView: 3 },
+      320: { slidesPerView: 1 },
     },
   });
 </script>
+
 
 	
   <!-- Contact Section -->
