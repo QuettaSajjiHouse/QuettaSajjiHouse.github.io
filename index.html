@@ -31,7 +31,8 @@
     justify-content: center;
     align-items: center;
     opacity: 0.5;
-    transition: transform 0.8s, opacity 0.8s;
+    transform: scale(0.9); /* Default scale for non-active slides */
+    transition: transform 1s ease, opacity 1s ease;
   }
 
   .swiper-slide img {
@@ -41,16 +42,18 @@
   }
 
   .swiper-slide-active {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Highlight the active slide */
     opacity: 1;
+    border: 3px solid orange; /* Outline the center photo */
   }
 
   .swiper-slide-next,
   .swiper-slide-prev {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slightly larger for adjacent slides */
     opacity: 0.75;
   }
 </style>
+
 
 	
 </head>
@@ -277,20 +280,21 @@
   const swiper = new Swiper('.gallery-slider', {
     loop: true,
     centeredSlides: true,
-    slidesPerView: 5, // Always keep 5 slides visible
+    slidesPerView: 5, // Always maintain 5 visible slides
     spaceBetween: 20,
     autoplay: {
-      delay: 4000, // 4 seconds delay for slower transitions
+      delay: 4000, // Slower rotation (4 seconds)
       disableOnInteraction: false,
     },
-    speed: 1000, // Smooth transition speed (1 second)
+    speed: 1200, // Smooth transition speed (1.2 seconds)
     breakpoints: {
-      768: { slidesPerView: 5 }, // Ensure 5 slides for medium screens
-      576: { slidesPerView: 3 }, // Adjust to 3 slides for smaller screens
+      768: { slidesPerView: 5 }, // 5 slides for medium screens
+      576: { slidesPerView: 3 }, // Adjust to 3 for small screens
       320: { slidesPerView: 1 }, // Single slide for extra small screens
     },
   });
 </script>
+
 	
   <!-- Contact Section -->
   <section id="contact" class="text-center py-5" style="background-color: #ffcc00;">
