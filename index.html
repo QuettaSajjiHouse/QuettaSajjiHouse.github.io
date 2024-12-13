@@ -8,35 +8,42 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
-	<style>
-        .gallery {
-            width: 80%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .gallery .swiper-wrapper {
-            align-items: center;
-        }
-        .gallery .swiper-slide {
-            width: 250px;
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .gallery .swiper-slide img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .swiper-slide-active {
-            transform: scale(1.2);
-            z-index: 1;
-            transition: transform 0.5s;
-        }
-    </style>
+ <style>
+    .gallery {
+      padding: 50px 0;
+      background-color: #fff5e6;
+    }
+
+    .gallery-slider {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-slide {
+      width: 250px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .swiper-slide-active {
+      transform: scale(1.2);
+      z-index: 1;
+      transition: transform 0.5s;
+    }
+  </style>
 	
 </head>
 <body>
@@ -218,62 +225,69 @@
     </div>
   </section>
 
-<section id="gallery" class="gallery">
-    <div class="gallery-slider swiper">
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container text-center">
+      <h2 class="mb-5">Gallery</h2>
+      <div class="gallery-slider swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-		    <h2>Gallery</h2>
-                <a href="https://via.placeholder.com/600" class="glightbox">
-                    <img src="pic2.png" alt="Image 1">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="https://via.placeholder.com/600" class="glightbox">
-                    <img src="pic3.png" alt="Image 2">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="https://via.placeholder.com/600" class="glightbox">
-                    <img src="pic4.png" alt="Image 3">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="https://via.placeholder.com/600" class="glightbox">
-                    <img src="pic5.png" alt="Image 4">
-                </a>
-            </div>
-            <div class="swiper-slide">
-                <a href="https://via.placeholder.com/600" class="glightbox">
-                    <img src="pic6.png" alt="Image 5">
-                </a>
-            </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/600" class="glightbox">
+              <img src="pic2.png" alt="Image 1">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/600" class="glightbox">
+              <img src="pic3.png" alt="Image 2">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/600" class="glightbox">
+              <img src="pic4.png" alt="Image 3">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/600" class="glightbox">
+              <img src="pic5.png" alt="Image 4">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/600" class="glightbox">
+              <img src="pic6.png" alt="Image 5">
+            </a>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Swiper JS and GLightbox from CDN -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!-- Swiper JS and GLightbox Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper('.gallery-slider', {
+      loop: true,
+      spaceBetween: 20,
+      centeredSlides: true,
+      slidesPerView: 3,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        768: { slidesPerView: 3 },
+        576: { slidesPerView: 2 },
+        320: { slidesPerView: 1 },
+      }
+    });
 
-<script>
-  // Initialize Swiper
-  const swiper = new Swiper('.gallery-slider', {
-    loop: true,
-    spaceBetween: 20,
-    centeredSlides: true,
-    slidesPerView: 5,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-  });
-
-  // Initialize GLightbox
-  const lightbox = GLightbox({
-    selector: '.glightbox',
-  });
-</script>
-
+    // Initialize GLightbox
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+    });
+  </script>
+	
   <!-- Contact Section -->
   <section id="contact" class="text-center py-5" style="background-color: #ffcc00;">
     <div class="container">
@@ -283,11 +297,6 @@
       <p>Instagram: <a href="https://www.instagram.com/QuettaSajjiHouse">Quetta Sajji House</a></p>
     </div>
   </section>
-
-  <!-- Bootstrap JS, Popper.js, and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
