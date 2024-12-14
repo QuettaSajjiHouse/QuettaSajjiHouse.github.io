@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quetta Sajji House</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
-<style>
-  .gallery {
-    padding: 50px 0;
-    background-color: #fff5e6;
-  }
-
-  .gallery-slider {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .swiper-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
-  .swiper-slide {
-    width: 200px; /* Reduced width for better alignment */
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.4; /* Default fade for non-active slides */
-    transform: scale(0.8); /* Shrunk scale for non-active slides */
-    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), opacity 1s ease; /* Smooth cubic transition */
-  }
-
-  .swiper-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .swiper-slide-active {
-    transform: scale(1.3); /* Larger scale for active slide */
-    opacity: 1; /* Fully visible */
-    border: 4px solid #ffa500; /* Highlighted outline */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
-    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease; /* Faster smooth effect */
-  }
-
-  .swiper-slide-next,
-  .swiper-slide-prev {
-    transform: scale(1.1); /* Moderate scaling for adjacent slides */
-    opacity: 0.7; /* Slight fade for adjacent slides */
-  }
-</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff5e6;
+      text-align: center;
+    }
+    .gallery {
+      padding: 50px 0;
+    }
+    .gallery-slider {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .swiper-slide {
+      width: 150px;
+      height: 275px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.4;
+      transform: scale(0.8);
+      transition: transform 0.8s, opacity 0.8s;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .swiper-slide-active {
+      transform: scale(1.3);
+      opacity: 1;
+      border: 4px solid #ffa500;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 
 
 	
@@ -238,65 +228,39 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="gallery">
-    <div class="container text-center">
-      <h2 class="mb-5">Gallery</h2>
-      <div class="gallery-slider swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="https://via.placeholder.com/600" class="glightbox">
-              <img src="pic2.png" alt="Image 1">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://via.placeholder.com/600" class="glightbox">
-              <img src="pic3.png" alt="Image 2">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://via.placeholder.com/600" class="glightbox">
-              <img src="pic4.png" alt="Image 3">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://via.placeholder.com/600" class="glightbox">
-              <img src="pic5.png" alt="Image 4">
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://via.placeholder.com/600" class="glightbox">
-              <img src="pic6.png" alt="Image 5">
-            </a>
-          </div>
-        </div>
-      </div>
+ <!-- Gallery Section -->
+<section class="gallery">
+  <div class="gallery-slider swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="pic2.png" alt="Image 1"></div>
+      <div class="swiper-slide"><img src="pic3.png" alt="Image 2"></div>
+      <div class="swiper-slide"><img src="pic4.png" alt="Image 3"></div>
+      <div class="swiper-slide"><img src="pic5.png" alt="Image 4"></div>
+      <div class="swiper-slide"><img src="pic6.png" alt="Image 5"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Swiper JS and GLightbox Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-	  
+<!-- Scripts Section -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.gallery-slider', {
     loop: true,
     centeredSlides: true,
-    slidesPerView: 5, // Ensure consistent 5 slides visible
-    spaceBetween: 15, // Smaller gap for better alignment
+    slidesPerView: 'auto',
+    spaceBetween: 20,
     autoplay: {
-      delay: 5000, // Smoothly rotate every 5 seconds
+      delay: 3000,
       disableOnInteraction: false,
     },
-    speed: 1000, // Smoother transition speed
+    speed: 1000,
     breakpoints: {
-      768: { slidesPerView: 5 },
-      576: { slidesPerView: 3 },
+      768: { slidesPerView: 3 },
+      576: { slidesPerView: 2 },
       320: { slidesPerView: 1 },
     },
   });
 </script>
-
 
 	
   <!-- Contact Section -->
